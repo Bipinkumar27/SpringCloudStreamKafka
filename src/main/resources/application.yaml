@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: SpringCloudStreamKafka
+  cloud:
+      stream:
+          bindings:
+              process-in-0:
+                  destination: input-topic
+          kafka:
+              binder:
+                  application-id: spring-cloud-stream-kafka
+                  brokers: localhost:9092
+                  configuration:
+                      security.protocol: PLAINTEXT
+                      auto.create.topics.enable: true
